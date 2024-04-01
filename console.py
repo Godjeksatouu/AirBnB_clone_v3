@@ -2,18 +2,12 @@
 '''
     Implementing the console for the HBnB project.
 '''
+import os
 import cmd
-import json
-import shlex
-import models
-from models import storage
-from models.base_model import BaseModel
-from models.user import User
-from models.place import Place
-from models.state import State
-from models.city import City
-from models.amenity import Amenity
-from models.review import Review
+from models import base_model, user, storage, CNC
+
+BaseModel = base_model.BaseModel
+User = user.User
 
 class HBNBCommand(cmd.Cmd):
     """
